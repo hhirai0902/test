@@ -8,6 +8,8 @@ import re                               # 正規表現処理
 import csv                              # CSVファイル操作
 import requests                         # urlを読み込む
 import os                               # フォルダ作成
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 import uuid                             # ユニークなIDを生成
 
@@ -15,7 +17,7 @@ import uuid                             # ユニークなIDを生成
 # 初期値設定
 # ------------------------------------ #
 # アクセスするURL
-url = "https://www.nikkei.com/markets/kabu/"
+url = "file:///C:/Users/002048.FAS/Documents/hirai/trunk/as-raserver_work/python_script/Github/scraping/nikkeiheikin.html"
 #url = "https://www.footlocker.com/product/nike-free-m-2018--mens/42836008.html"
 #url = "https://search.nifty.com/imagesearch/search?select=1&q=%s&ss=up"
 #keyword = "猫"
@@ -25,14 +27,30 @@ url = "https://www.nikkei.com/markets/kabu/"
 # ------------------------------------ #
 # スクレイピング処理
 # ------------------------------------ #
+# ブラウザのオプションを格納する編集を取得
+options = Options()
+
+# Headlessモードを有効にする（コメントアウトするとブラウザが立ち上がる）
+#options.set_headless(True)
+
+# ブラウザを起動する
+driver = webdriver.Chrome(executable_path="C:\chromedriver\chromedriver.exe", chrome_options = options)
+
+# ブラウザでアクセスする
+driver.get(url)
+
+# HTMLを文字コードUTF-8に変換して取得
+html = driver.page_source.encode("utf-8")
+
+
 # URLにアクセスする 戻り値にはアクセスした結果やHTMLなどが入ったinstanceが帰ってきます
-instance = urllib.request.urlopen(url)
+#html = urllib.request.urlopen(url)
 
 # htmlをBeautifulSoupで扱う,URL内を解析
-soup = BeautifulSoup(instance, "html.parser")
+soup = BeautifulSoup(html, "html.parser")
 
-# CSSセレクターを使って指定した場所のtextを表示します
-print(soup.select_one("#CONTENTS_MARROW > div.mk-top_stock_average.cmn-clearfix > div.cmn-clearfix > div.mkc-guidepost > div.mkc-prices > span.mkc-stock_prices").text)
+# idがheikinの要素を表示
+print(soup.select_one("#heikin"))
 
 
 '''
