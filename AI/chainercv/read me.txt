@@ -1,0 +1,9 @@
+ŽÀŽ{•û–@
+
+conda activate chainer
+
+cd C:\Users\002048.FAS\Documents\software\AI\IF1708T\DeepLearning\chainercv
+
+
+python realtime_detect.py 2572316-preview.mp4
+

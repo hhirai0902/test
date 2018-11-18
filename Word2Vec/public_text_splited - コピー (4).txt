@@ -1,0 +1,9 @@
+マスタ A8 スレーブ A9 組み合わせ 計測 動作 開始
+DTC ストア なし 故障 未検出
+DTC ストア なし 故障 未検出
+A9 変更 InitComplete 送信 方法 事 スレーブ A9 初期化 完了 時 スレーブ InitComplete Done or Fail
+A8 以前 初期化 完了 計測 可能 不可 確定 時 スレーブ 自発的 InitComplete Done or Fail A9 自発 的 InitComplete InitConnect 応答 InitComplete 様
+A9 InitConnect 定期 対応 A9 同士 場合 InitConnect 定期 送信 応答 初期化 完了 計測 可能 不可 作り
+マスタ A8 以前 場合 InitConnect 定期 送信 なく スレーブ A9
+ユニット 混在 使用 事 考慮 為 変更 修正 時 検出
+ユニット 混在 使用 事 考慮 為 評価 項目

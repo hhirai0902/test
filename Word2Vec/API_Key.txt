@@ -1,0 +1,15 @@
+Keys and tokens
+Keys, secret keys and access tokens management.
+
+Consumer API keys
+E6QO1Kow4QCLR9rDlSD9aFD2F (API key)
+
+qqAQaVe7e06DjvRCkOaIL8w6ljMlsXMdHSjUzjU6MtWCoTuLS3 (API secret key)
+
+Regenerate
+Access token & access token secret
+379567135-BJmz4A1CkBrdz76IbsPJRdilWj1jgodVgQeDoBAa (Access token)
+
+62tuwaCpdzBiTuS7t5odcyKfcjECUPX0WdHzD3aOkTbLe (Access token secret)
+
+Read, write, and direct messages (Access level)
